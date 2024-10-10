@@ -28,6 +28,10 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Nota importante:
 
+el projecto esta realizado en Angular 17 se debe realizar la respectiva instalacion de archivos NPM con el comando "npm i", de igual forma se debe tener previamente instalado
+Angular CLI en el computador donde se vaya a desplegar el proyecto , para realzar el despliegue puede usar el comando
+"ng serve --o"
+
 En caso de que el servidor backend sea cambiado o se despliegue en un puerto diferente al 8080, es necesario actualizar la configuración en el archivo environment.ts. Este archivo se encuentra en la ruta:
 
 /src/assets/environment.ts
