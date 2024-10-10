@@ -62,7 +62,6 @@ export class ShoppingCartComponent {
       total: totalFactura,
       status: 'pending',
     };
-
     this.orderService.postcreateOrder(order).subscribe((rest) => {
       console.log('Order ID:', rest.id);
       const observables = orderItems.map((item) => {

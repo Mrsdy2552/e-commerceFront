@@ -6,7 +6,7 @@ import { Product, Product_Item } from '../models/ProductModel';
   providedIn: 'root',
 })
 export class ProdutService {
-  apiUrl = 'http://localhost:8080/api/products';
+  apiUrl = urlBack + 'products';
   private http = inject(HttpClient);
 
   constructor() {}

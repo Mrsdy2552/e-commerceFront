@@ -5,7 +5,7 @@ import { inject, Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class CustommerService {
-  apiUrl = 'http://localhost:8080/api/Customers';
+  apiUrl = urlBack +  'Customers';
   private http = inject(HttpClient);
 
   constructor() {}

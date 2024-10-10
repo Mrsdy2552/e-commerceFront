@@ -24,4 +24,12 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page..
+
+## Nota importante:
+
+En caso de que el servidor backend sea cambiado o se despliegue en un puerto diferente al 8080, es necesario actualizar la configuración en el archivo environment.ts. Este archivo se encuentra en la ruta:
+
+/src/assets/environment.ts
+
+Dentro de este archivo, asegúrate de modificar la variable urlBack con la nueva URL del backend.

@@ -6,8 +6,8 @@ import { Order, OrderItem, OrderResponse } from '../models/orderModel';
   providedIn: 'root',
 })
 export class OrderService {
-  apiUrl = 'http://localhost:8080/api/Order';
-  apiUrlItem = 'http://localhost:8080/api/OrderItem';
+  apiUrl = urlBack + 'Order';
+  apiUrlItem = urlBack + 'OrderItem';
   private http = inject(HttpClient);
 
   constructor() {}
