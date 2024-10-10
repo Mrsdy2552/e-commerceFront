@@ -1,0 +1,53 @@
+<div class="container">
+    <h2>Carrito de Compras</h2>
+
+    @if (produts.length === 0) {
+    <div>
+        <p>El carrito está vacío.</p>
+    </div>
+    }
+    @if (produts.length != 0) {
+    <table class="table mt-2">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Total</th>
+                <th scope="col">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for (item of produts; track item; let i = $index) {
+
+            <tr>
+                <th scope="row">{{i+1}} </th>
+                <td>{{item.product.name}}</td>
+                <td>{{item.product. price}}</td>
+                <td>{{item.quantity}}</td>
+                <td>{{ item.product.price * item.quantity}}</td>
+                <td>
+                    <button type="button" class="btn btn-outline-primary m-2"
+                        (click)="addToCart(item.product)">+</button>
+                    <button type="button" class="btn btn-outline-danger" (click)="removeToCart(item.product)">
+                        -
+                    </button>
+                </td>
+            </tr>
+            }
+
+        </tbody>
+    </table>
+    }
+
+    <div class="d-flex justify-content-between mt-4">
+        <div *ngIf="produts.length !== 0">
+            <button class="btn btn-danger" (click)="clearCart()">Vaciar carrito</button>
+        </div>
+        <div>
+            <button class="btn btn-primary me-2" (click)="gotcatalog()">Ir al catálogo</button>
+            <button *ngIf="produts.length !== 0" (click)="buy()" type="button" class="btn btn-success">Confirmar</button>
+        </div>
+    </div>
+</div>

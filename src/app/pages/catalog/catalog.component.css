@@ -1,0 +1,36 @@
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .products,
+  .orders {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .product,
+  .order {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .product img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  .product h3,
+  .order h3 {
+    margin-top: 0;
+  }
+
+    

@@ -1,0 +1,130 @@
+<div class="container mt-5">
+    <h2>Formulario de Registro</h2>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" method="POST" novalidate>
+
+        <div class="row">
+            <!-- Primera columna -->
+            <div class="col-md-6">
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="first_name">Nombre:</label>
+                    <input type="text" id="first_name" name="first_name" formControlName="first_name"
+                        class="form-control" placeholder="Ingrese el nombre"
+                        [ngClass]="{'is-invalid': Valid('first_name')}" required>
+
+                    @if (Valid('first_name')) {
+                    <div class="invalid-feedback">
+                        Nombre inválido.
+                    </div>
+                    }
+                </div>
+
+                <!-- Apellido -->
+                <div class="form-group">
+                    <label for="last_name">Apellido:</label>
+                    <input type="text" id="last_name" name="last_name" formControlName="last_name" class="form-control"
+                        placeholder="Ingrese el apellido" [ngClass]="{'is-invalid': Valid('last_name')}" required>
+
+                    @if (Valid('last_name')) {
+                    <div class="invalid-feedback">
+                        Apellido inválido.
+                    </div>
+                    }
+                </div>
+
+                <!-- Correo Electrónico -->
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" formControlName="email" class="form-control"
+                        placeholder="Ingrese el correo electrónico" [ngClass]="{'is-invalid': Valid('email')}" required>
+
+                    @if (Valid('email')) {
+                    <div class="invalid-feedback">
+                        Correo electrónico inválido.
+                    </div>
+                    }
+                </div>
+
+                <!-- Ciudad -->
+                <div class="form-group">
+                    <label for="city">Ciudad:</label>
+                    <input type="text" id="city" name="city" formControlName="city" class="form-control"
+                        placeholder="Ingrese la ciudad" [ngClass]="{'is-invalid': Valid('city')}">
+
+                    @if (Valid('city')) {
+                    <div class="invalid-feedback">
+                        Ciudad inválida.
+                    </div>
+                    }
+                </div>
+            </div>
+
+            <!-- Segunda columna -->
+            <div class="col-md-6">
+                <!-- Dirección -->
+                <div class="form-group">
+                    <label for="address">Dirección:</label>
+                    <input type="text" id="address" name="address" formControlName="address" class="form-control"
+                        placeholder="Ingrese la dirección" [ngClass]="{'is-invalid': Valid('address')}">
+
+                    @if (Valid('address')) {
+                    <div class="invalid-feedback">
+                        Dirección inválida.
+                    </div>
+                    }
+                </div>
+
+                <!-- Código Postal -->
+                <div class="form-group">
+                    <label for="postal_code">Código Postal:</label>
+                    <input type="text" id="postal_code" name="postal_code" formControlName="postal_code"
+                        class="form-control" placeholder="Ingrese el código postal"
+                        [ngClass]="{'is-invalid': Valid('postal_code')}">
+
+                    @if (Valid('postal_code')) {
+                    <div class="invalid-feedback">
+                        Código postal inválido.
+                    </div>
+                    }
+                </div>
+
+                <!-- País -->
+                <div class="form-group">
+                    <label for="country">País:</label>
+                    <input type="text" id="country" name="country" formControlName="country" class="form-control"
+                        placeholder="Ingrese el país" [ngClass]="{'is-invalid': Valid('country')}">
+
+                    @if (Valid('country')) {
+                    <div class="invalid-feedback">
+                        País inválido.
+                    </div>
+                    }
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="phone">Teléfono:</label>
+                    <input type="text" id="phone" name="phone" formControlName="phone" class="form-control"
+                        placeholder="Ingrese el teléfono">
+
+                    @if (Valid('phone')) {
+                    <div class="invalid-feedback">
+                        Teléfono inválido.
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+
+        <!-- Botón de envío -->
+        <div class="form-group">
+
+            <input type="submit" value="Crear Cliente" class="btn btn-primary" [disabled]="form.invalid">
+
+
+            <!-- <button (click)="redireccionar()">ir a compras  </button> -->
+        </div>
+
+    </form>
+
+</div>

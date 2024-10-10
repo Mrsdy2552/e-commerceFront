@@ -1,0 +1,27 @@
+<div class="container">
+    <!-- Sección de productos -->
+    <h2>Catálogo de Productos</h2>
+    <div class="products">
+        @for (product of listProduct; track $index) {
+        <div class="product">
+            <!-- <img src="product1.jpg" alt="Producto 1"> -->
+            <h3>{{product.name}}</h3>
+            <p>{{product.description}}</p>
+            <p><strong>Precio:</strong> ${{product.price}}</p>
+            <p><strong>stock:</strong> ${{product.stock}}</p>
+
+            <button type="button" class="btn btn-outline-warning" (click)="addShoppingCard(product)">
+                Añadir al carrito
+
+            </button>
+        </div>
+        }
+    </div>
+    <div class="orders">
+        <button type="button" class="btn btn-primary btn-lg" (click)="gottoShoppingCard()">
+            ir al Carrito
+
+        </button>
+    </div>
+
+</div>
